@@ -4216,16 +4216,20 @@ a.badge:hover {
 /* ===== Primary Styles ========================================================
    Author: Ian Clausen
    ========================================================================== */
+/* Kuler Profiles */
 body {
-  background-image: url('/img/wood_1.png');
+  background-image: url('/img/wood_64.jpg');
 }
-body .titleDiv .banner {
+body .container {
+  width: 960px;
+}
+body .container .titleDiv .banner {
   margin: 20px auto;
   background-image: url('/img/TitleFrameSlice.png');
   width: 601px;
   height: 244px;
 }
-body .titleDiv .banner h1 {
+body .container .titleDiv .banner h1 {
   font-size: 48px;
   line-height: 252px;
   margin: auto;
@@ -4234,13 +4238,56 @@ body .titleDiv .banner h1 {
   font-weight: 600;
   font-family: 'AlexBrushRegular', Arial, sans-serif;
 }
-body .titleDiv .banner h1 a {
-  color: #ddddcd;
+body .container .titleDiv .banner h1 a {
+  color: #9daabb;
   text-decoration: none;
 }
-body .nav-items {
+body .container .nav-items {
+  text-align: center;
   line-height: 30px;
 }
-body .nav-items a {
+body .container .nav-items a {
   font-size: 18px;
+  margin: 0px 10px;
+  line-height: 60px;
+  color: #403e3f;
+}
+body .container .nav-items a:hover {
+  color: #d9d9d9;
+}
+body .container .rule {
+  background: transparent url('/img/Rule800Blue.png') no-repeat;
+  width: 800px;
+  height: 9px;
+  margin: 0px auto;
+}
+body .container .home .tagline {
+  width: 450px;
+  margin: 20px auto;
+}
+body .container .home .tagline .taglineWrapper {
+  background: transparent url('/img/TLFrameCorner.png') no-repeat left top;
+  height: 60px;
+}
+body .container .home .tagline .taglineContainer {
+  background: transparent url('/img/BRFrameCorner.png') no-repeat right bottom;
+  height: 60px;
+}
+body .container .home .tagline .taglineContainer .taglineCopy {
+  line-height: 60px;
+  position: relative;
+  left: 50px;
+  color: #d9d9d9;
+  font-size: 24px;
+  font-family: 'AlexBrushRegular', Arial, sans-serif;
+}
+body .container .home .slider {
+  width: 500px;
+  margin: 30px auto;
+}
+body .container .about .imageBox1 {
+  margin: 20px auto;
+  background: transparent url('/img/picBox1-760.jpg') no-repeat;
+  width: 760px;
+  height: 475px;
 }

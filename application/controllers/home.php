@@ -17,6 +17,7 @@ class Home extends CI_Controller {
 			show_404();
 		}
 		
+		$this->load->library('rb');
 		$data['title'] = ucfirst($page); // Capitalize the first letter
 		
 		$this->load->view('templates/header', $data);

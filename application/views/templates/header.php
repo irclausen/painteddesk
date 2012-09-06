@@ -19,6 +19,11 @@
 </head>
 <body>
 <div class="container">
+	<div class="titleDiv">
+		<div class="banner">
+			<h1><a href="/">The Painted Desk</a></h1>
+		</div>
+	</div>
 	<div class="nav-items">
 		<a href="/">Home</a> | 
 		<a href="/custom">Custom</a> | 
@@ -26,8 +31,4 @@
 		<a href="/about">About</a> | 
 		<a href="/contact">Contact</a>
 	</div>
-	<div class="titleDiv">
-		<div class="banner">
-			<h1><a href="/">The Painted Desk</a></h1>
-		</div>
-	</div>
+	<div class="rule"></div>

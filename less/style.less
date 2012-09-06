@@ -14,40 +14,116 @@ body {
    Author: Ian Clausen
    ========================================================================== */
 
+/* Kuler Profiles */
+//Cool Grey
+@coolGrey1:#F5E3CD;
+@coolGrey2:#696158;
+@coolGrey3:#B6A898;
+@coolGrey4:#877D71;
+@coolGrey5:#504A43;
+
+//Cool Warm Grey
+@cwGrey1:#D3DBE0;
+@cwGrey2:#F0F7FC;
+@cwGrey3:#FAFEEF;
+@cwGrey4:#DDDDDB;
+@cwGrey5:#FEFFFA;
+
+//Amazing Grey #2
+@amazingGrey1:#403E3F;
+@amazingGrey2:#F2F2F2;
+@amazingGrey3:#D9D9D9;
+@amazingGrey4:#9DAABB;
+@amazingGrey5:#8C8C8C;
+
 @lightAccentColor: #DDDDCD;
+@contentWidth:960px;
 
 body {
-	background-image: url('/img/wood_1.png');
-	.titleDiv {
-
-		.banner {
-			margin:20px auto;
-			background-image: url('/img/TitleFrameSlice.png');
-			width:601px;
-			height:244px;
-			h1 {
-				font-size: 48px;
-				line-height:252px;
-				margin: auto;
-				text-align:center;
+	background-image: url('/img/wood_64.jpg');
+	.container {
+		width:@contentWidth;
+		.titleDiv {
+			.banner {
+				margin:20px auto;
+				background-image: url('/img/TitleFrameSlice.png');
 				width:601px;
-				font-weight:600;
-				font-family:'AlexBrushRegular', Arial, sans-serif;
-				
-				a {
-					color:@lightAccentColor;
-					text-decoration:none;
+				height:244px;
+				h1 {
+					font-size: 48px;
+					line-height:252px;
+					margin: auto;
+					text-align:center;
+					width:601px;
+					font-weight:600;
+					font-family:'AlexBrushRegular', Arial, sans-serif;
+					
+					a {
+						color:@amazingGrey4;
+						text-decoration:none;
+					}
 				}
+			}
+		}
+		
+		.nav-items {
+			text-align:center;
+			line-height:30px;
+			a{
+				font-size:18px;
+				margin:0px 10px;
+				line-height:60px;
+				color:@amazingGrey1;
+			}
+			a:hover {
+				color:@amazingGrey3;
+			}	
+		}
+		.rule {
+			background: transparent url('/img/Rule800Blue.png') no-repeat;
+			width:800px;
+			height:9px;
+			margin:0px auto;
+		}
+
+		.home {
+			.tagline {
+				width:450px;
+				margin:20px auto;
+				.taglineWrapper {
+					background: transparent url('/img/TLFrameCorner.png') no-repeat left top;
+					height:60px;
+				}
+				.taglineContainer {
+					background: transparent url('/img/BRFrameCorner.png') no-repeat right bottom;
+					height:60px;
+					.taglineCopy {
+						line-height:60px;
+						position:relative;
+						left: 50px;
+						color:@amazingGrey3;
+						font-size:24px;
+						font-family: 'AlexBrushRegular', Arial, sans-serif;
+					}
+				}
+			}
+			
+			.slider {
+				width:500px;
+				margin:30px auto;
+			}
+		}
+		.about {
+			.imageBox1 {
+				width:760px;
+				margin:20px auto;
+				background: transparent url('/img/picBox1-760.jpg') no-repeat;
+				width:760px;
+				height:475px;
 			}
 		}
 	}
 	
-	.nav-items {
-		line-height:30px;
-		a{
-			font-size:18px;
-		}	
-	}
 }
 
 
