@@ -1,6 +1,7 @@
 @import "bootstrap/bootstrap.less";
 
 @import "font.less";
+@import "flexslider.less";
 
 body {
   //padding-top: 60px;
@@ -108,9 +109,20 @@ body {
 				}
 			}
 			
-			.slider {
-				width:500px;
+			#slider {
+				width:400px;
+				max-width:600px;
 				margin:30px auto;
+			}
+			#carousel {
+				width:600px;
+				margin: 20px auto;
+				li {
+					margin: auto 2px;
+					img {
+						margin:auto;
+					}
+				}
 			}
 		}
 		.about {

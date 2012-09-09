@@ -8,12 +8,28 @@
 			</div>
 		</div>
 	</div>
-	<div class="slider">
-		<?php 
-			$id = 1;
-			$furniture = R::load('furniture', $id);
-			echo '<img src="'.$furniture->primaryImage.'" alt="'.$furniture->title.'">';
-		?>
+	<div id="slider" class="flexslider">
+		<ul class="slides">
+			<?php 
+				$id = 1;
+				$furniture = R::getAll('select * from furniture');
+				foreach ($furniture as $item) {
+					echo '<li><img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" /></li>';
+				}
+			?>
 		<!--<img src="/img/furniture/test.jpg" alt="">-->
+		</ul>
+	</div>
+	<div id="carousel" class="flexslider">
+		<ul class="slides">
+			<?php 
+				$id = 1;
+				$furniture = R::getAll('select * from furniture');
+				foreach ($furniture as $item) {
+					echo '<li><img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" /></li>';
+				}
+			?>
+		<!--<img src="/img/furniture/test.jpg" alt="">-->
+		</ul>
 	</div>
 </div>

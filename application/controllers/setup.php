@@ -27,6 +27,16 @@ class Setup extends CI_Controller {
 	    R::store($furniture);
 
 	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Blue Inlay Coffee Table';
+	    $furniture->primaryImage = '/img/furniture/blueInlayCoffeeTable.jpg';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Blue Nightstand';
+	    $furniture->primaryImage = '/img/furniture/blueNightstand.jpg';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
 	    $furniture->title = 'Blue Octogon Table';
 	    $furniture->primaryImage = '/img/furniture/blueOctogonTable.jpg';
 	    R::store($furniture);
@@ -49,6 +59,21 @@ class Setup extends CI_Controller {
 	    $furniture = R::dispense('furniture');
 	    $furniture->title = 'Decorative Mirror';
 	    $furniture->primaryImage = '/img/furniture/decorativeMirror.jpg';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Elegant Blue Dresser';
+	    $furniture->primaryImage = '/img/furniture/elegantBlueDresser.jpg';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Antique Dresser';
+	    $furniture->primaryImage = '/img/furniture/FLAntiqueDresser.jpg';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Glass Knob Dresser';
+	    $furniture->primaryImage = '/img/furniture/glassKnobDresser.jpg';
 	    R::store($furniture);
 		
 		$data['title'] = ucfirst($page); // Capitalize the first letter
