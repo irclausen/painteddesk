@@ -10,7 +10,14 @@ class Upload extends CI_Controller {
 
 	function index()
 	{
-		$this->load->view('upload_form', array('error' => ' ' ));
+		if($this->ion_auth->logged_in())
+		{
+			$this->load->view('upload_form', array('error' => ' ' ));
+		}
+		else
+		{
+			redirect('/auth/login');
+		}
 	}
 
 	function do_upload()

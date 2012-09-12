@@ -18,7 +18,8 @@ class Setup extends CI_Controller {
 		}
 
 		$this->load->library('rb');
-	    R::setup();
+	    R::setup('mysql:host=localhost;
+        dbname=tpd','tpd_user','pass@word1');
 	    R::nuke();
 
 	    $furniture = R::dispense('furniture');

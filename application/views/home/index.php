@@ -12,6 +12,9 @@
 		<ul class="slides">
 			<?php 
 				$id = 1;
+				R::addDatabase('tpd','mysql:host=localhost;
+        dbname=tpd','tpd_user','pass@word1');
+				R::selectDatabase('tpd');
 				$furniture = R::getAll('select * from furniture');
 				foreach ($furniture as $item) {
 					echo '<li><img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" /></li>';

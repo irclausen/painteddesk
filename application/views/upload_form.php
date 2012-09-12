@@ -5,6 +5,7 @@
 <body>
 
 <?php echo $error;?>
+<a href="<?= site_url('auth/logout') ?>">Log out</a>
 
 <?php echo form_open_multipart('upload/do_upload');?>
 
