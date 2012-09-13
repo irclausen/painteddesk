@@ -44,6 +44,9 @@ class Upload extends CI_Controller {
 			$file_name = $updata['file_name'];
 
 			$this->load->library('rb');
+			R::addDatabase('tpd','mysql:host=localhost;
+        dbname=tpd','tpd_user','pass@word1');
+			R::selectDatabase('tpd');
 			$furniture = R::dispense('furniture');
 			$furniture->title = $this->input->post('title');
 			$furniture->primaryImage = "/img/furniture/".$file_name;

@@ -17,7 +17,9 @@ $(window).load(function() {
     controlNav: false,
     smoothHeight: true,
     animationLoop: false,
-    slideshow: false,
+    slideshow: true,                //Boolean: Animate slider automatically
+    slideshowSpeed: 4000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+    animationSpeed: 1000,
     maxItems:1,
     itemWidth:0,
     sync: "#carousel"
