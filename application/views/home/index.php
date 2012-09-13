@@ -1,5 +1,5 @@
 <div class="home">
-	<div class="tagline">
+	<!--<div class="tagline">
 		<div class="taglineWrapper">
 			<div class="taglineContainer">
 				<div class="taglineCopy">
@@ -7,7 +7,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<div id="slider" class="flexslider">
 		<ul class="slides">
 			<?php 

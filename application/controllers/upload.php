@@ -12,7 +12,9 @@ class Upload extends CI_Controller {
 	{
 		if($this->ion_auth->logged_in())
 		{
+			$this->load->view('templates/header');
 			$this->load->view('upload_form', array('error' => ' ' ));
+			$this->load->view('templates/footer');
 		}
 		else
 		{
@@ -34,7 +36,9 @@ class Upload extends CI_Controller {
 		{
 			$error = array('error' => $this->upload->display_errors());
 
+			$this->load->view('templates/header');
 			$this->load->view('upload_form', $error);
+			$this->load->view('templates/footer');
 		}
 		else
 		{
@@ -52,7 +56,9 @@ class Upload extends CI_Controller {
 			$furniture->primaryImage = "/img/furniture/".$file_name;
 			R::store($furniture);
 
+			$this->load->view('templates/header');
 			$this->load->view('upload_success', $data);
+			$this->load->view('templates/footer');
 		}
 	}
 }

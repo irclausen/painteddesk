@@ -95,8 +95,9 @@ class Auth extends CI_Controller {
 				'id' => 'password',
 				'type' => 'password',
 			);
-
+			$this->load->view('templates/header', $this->data);
 			$this->load->view('auth/login', $this->data);
+			$this->load->view('templates/footer', $this->data);
 		}
 	}
 

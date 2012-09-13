@@ -9,11 +9,13 @@
 
 <?php echo form_open_multipart('upload/do_upload');?>
 
+<label for="userfile">Image File:</label>
 <input type="file" name="userfile" size="20" />
+<label for="title">Title:</label>
+<input type="text" name="title" /><br />
 
-<br /><br />
-
-<input type="text" name="title" />
+<span>This item is sold:</span>
+<input type="checkbox" name="isSold" value="true"><br />
 
 <input type="submit" value="upload" />
 

@@ -17,7 +17,7 @@ class Shop extends CI_Controller {
 			//Page does not exist
 			show_404();
 		}
-
+		$this->load->library('rb');
 		$data['section'] = $this->section;
 		$data['title'] = ucfirst($page); //Get title, capitallize the first letter
 		if (strcasecmp($data['title'], 'index') == 0)
