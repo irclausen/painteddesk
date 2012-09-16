@@ -87,6 +87,22 @@ body {
 			margin:0px auto;
 		}
 
+		#slider {
+			width:400px;
+			max-width:600px;
+			margin:30px auto;
+		}
+		#carousel {
+			width:600px;
+			margin: 20px auto;
+			li {
+				margin: auto 2px;
+				img {
+					margin:auto;
+				}
+			}
+		}
+
 		.home {
 			.tagline {
 				width:450px;
@@ -108,30 +124,85 @@ body {
 					}
 				}
 			}
-			
-			#slider {
-				width:400px;
-				max-width:600px;
-				margin:30px auto;
-			}
-			#carousel {
-				width:600px;
-				margin: 20px auto;
-				li {
-					margin: auto 2px;
-					img {
-						margin:auto;
-					}
-				}
-			}
 		}
 		.about {
 			.imageBox1 {
 				width:760px;
 				margin:20px auto;
 				background: transparent url('/img/picBox1-760.jpg') no-repeat;
-				width:760px;
 				height:475px;
+				.clearfix;
+				.shade {
+					width:450px;
+					background: transparent url('/img/33333380.png');
+					float:right;
+					padding:10px;
+					height:455px;
+					.copyBoxWrapper {
+						background: transparent url('/img/TLFrameCorner.png') no-repeat left top;
+						//height: 100%;
+						margin:5px;
+						.copyBox {
+							background: transparent url('/img/BRFrameCorner.png') no-repeat right bottom;
+							color:@lightAccentColor;
+							font-size:18px;
+							line-height:24px;
+							height:100%;
+							padding:10px;
+							.copy {
+								margin:18px;
+							}
+						}
+					}
+				}	
+			}
+		}
+		.custom {
+			.imageBox1 {
+				width:760px;
+				background: transparent url('/img/shelves.jpg') no-repeat;
+				height:696px;
+				margin: 20px auto;
+				.copyBox {
+					background: transparent url('/img/33333380.png');
+					position: relative;
+					color:@lightAccentColor;
+					width:350px;
+					font-size: 16px;
+					padding:10px;
+					line-height: 24px;
+					li {
+						line-height: 20px;
+					}
+					&.one {
+						top:10px;
+						left:30px;
+						
+					}
+					&.two {
+						top:40px;
+						left:340px;
+					}
+					&.three {
+						left:45px;
+						top:100px;
+					}
+				}
+			}
+		}
+		.admin {
+			.createDiv {
+				width: 760px;
+				margin:20px auto;
+			}
+			.editList {
+				list-style: none;
+				li {
+					margin: 10px auto;
+				}
+				span{
+					margin: 20px;
+				}
 			}
 		}
 	}

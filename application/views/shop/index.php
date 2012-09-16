@@ -1,4 +1,4 @@
-<div>
+<div class="shop">
 	<div id="slider" class="flexslider">
 		<ul class="slides">
 			<?php 
