@@ -1,38 +1,16 @@
 <div class="home">
-	<!--<div class="tagline">
-		<div class="taglineWrapper">
-			<div class="taglineContainer">
-				<div class="taglineCopy">
-					Here is the tagline, to defeat all taglines
-				</div>
-			</div>
-		</div>
-	</div>-->
-	<div id="slider" class="flexslider">
-		<ul class="slides">
+	<div id="slider">
+		<div class="carousel-images">
 			<?php 
 				$id = 1;
 				R::addDatabase('tpd','mysql:host=localhost;
-        dbname=tpd','tpd_user','pass@word1');
+	    dbname=tpd','tpd_user','pass@word1');
 				R::selectDatabase('tpd');
 				$furniture = R::getAll('select * from furniture');
 				foreach ($furniture as $item) {
-					echo '<li><img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" /></li>';
+					echo '<img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" />';
 				}
 			?>
-		<!--<img src="/img/furniture/test.jpg" alt="">-->
-		</ul>
-	</div>
-	<div id="carousel" class="flexslider">
-		<ul class="slides">
-			<?php 
-				$id = 1;
-				$furniture = R::getAll('select * from furniture');
-				foreach ($furniture as $item) {
-					echo '<li><img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" /></li>';
-				}
-			?>
-		<!--<img src="/img/furniture/test.jpg" alt="">-->
-		</ul>
+		</div>
 	</div>
 </div>

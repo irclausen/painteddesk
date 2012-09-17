@@ -12,6 +12,7 @@
 				$furniture = R::getAll('select * from furniture');
 				$isForSale = $btnClass = '';
 				foreach ($furniture as $item) {
+					$dataIsForSale = $item["isForSale"];
 					if($item["isForSale"] > 0) 
 					{
 						$isForSale = "Make not for Sale";
@@ -22,7 +23,7 @@
 						$isForSale = "Make for sale";
 						$btnClass = "btn-success";
 					}
-					echo '<li><img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" width="40" height="60"/><span>'.$item["id"].'</span><span>'.$item["title"].'</span><span>'.$item["color"].'</span><span><button class="btn '.$btnClass.'" id="'.$item["id"].'">'.$isForSale.'</button></span></li>';
+					echo '<li><img src="'.$item["primaryImage"].'" alt="'.$item["title"].'" width="40" height="60"/><span>'.$item["id"].'</span><span>'.$item["title"].'</span><span>'.$item["color"].'</span><span><button class="isForSale btn '.$btnClass.'" id="'.$item["id"].'" data-forSale="'.$dataIsForSale.'">'.$isForSale.'</button></span></li>';
 				}
 			?>
 	 	</ul>

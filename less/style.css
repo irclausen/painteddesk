@@ -4465,11 +4465,6 @@ body .container .rule {
   height: 9px;
   margin: 0px auto;
 }
-body .container #slider {
-  width: 400px;
-  max-width: 600px;
-  margin: 30px auto;
-}
 body .container #carousel {
   width: 600px;
   margin: 20px auto;
@@ -4579,4 +4574,7 @@ body .container .admin .editList li {
 }
 body .container .admin .editList span {
   margin: 20px;
+}
+footer {
+  clear: both;
 }

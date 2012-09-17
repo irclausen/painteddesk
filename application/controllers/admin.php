@@ -46,20 +46,20 @@ class Admin extends CI_Controller {
 
 	function do_update()
 	{
-		if ( ! $this->admin->do_update())
+		if ( ! $this->input->post('id'))
 		{
-			$error = array('error' => $this->upload->display_errors());
+			$error = array('error' => $this->admin>display_errors());
 
-			$this->load->view('templates/header');
+			/*$this->load->view('templates/header');
 			$this->load->view('upload_form', $error);
-			$this->load->view('templates/footer');
+			$this->load->view('templates/footer');*/
 		}
 		else
 		{
-			$data = array('update_data' => $this->admin->data(),'post_data' => $this->input->post());
-			$updata = $this->upload->data();
-			$id = $updata['id'];
-			$isForSale = $updata['isForSale'];
+			//$data = array('update_data' => $this->data(),'post_data' => $this->input->post());
+			//$updata = $this->data();
+			$id = $this->input->post('id');
+			$isForSale = $this->input->post('isForSale');
 
 			$this->load->library('rb');
 			R::addDatabase('tpd','mysql:host=localhost;
