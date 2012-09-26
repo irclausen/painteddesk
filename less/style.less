@@ -40,6 +40,89 @@ body {
 @lightAccentColor: #DDDDCD;
 @contentWidth:960px;
 
+/*** Direction Aware Styles ***/
+
+.da-thumbs {
+	list-style: none;
+	width: 1008px;
+	//height: 600px;
+	position: relative;
+	margin: 10px auto;
+	padding: 0;
+}
+.da-thumbs li {
+	float: left;
+	margin: 0 8px 6px 0;
+	background: #fff;
+	position: relative;
+	//box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.da-thumbs li a,
+.da-thumbs li a img {
+	display: block;
+	position: relative;
+	text-decoration:none;
+}
+.da-thumbs li a {
+	overflow: hidden;
+}
+.da-thumbs li a div {
+	position: absolute;
+	margin:0;
+	background: url('/img/33333380.png') 0 0;
+	width: 100%;
+	height: 100%;
+}
+.da-thumbs li a div.da-animate {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+/* Initial state classes: */
+.da-slideFromTop {
+	left: 0px;
+	top: -100%;
+}
+.da-slideFromBottom {
+	left: 0px;
+	top: 100%;
+}
+.da-slideFromLeft {
+	top: 0px; 
+	left: -100%;
+}
+.da-slideFromRight {
+	top: 0px;
+	left: 100%;
+}
+/* Final state classes: */
+.da-slideTop {
+	top: 0px;
+}
+.da-slideLeft {
+	left: 0px;
+}
+.da-thumbs li a div span {
+	display: block;
+	padding: 10px 0;
+	margin: 40px 20px 20px 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #EEE;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+	font-family: 'NadiaSerifNormal';
+	font {
+		font-weight:bold;
+		text-decoration:none;
+	}
+}
+/*** end direction aware styles ***/
+
+
 body {
 	background-image: url('/img/wood_64.jpg');
 	.container {
@@ -70,15 +153,46 @@ body {
 		.nav-items {
 			text-align:center;
 			line-height:30px;
+			font-family: 'NadiaSerifNormal';
 			a{
 				font-size:18px;
 				margin:0px 10px;
 				line-height:60px;
 				color:@amazingGrey1;
+				text-decoration:none;
 			}
 			a:hover {
 				color:@amazingGrey3;
-			}	
+			}
+			.active {
+				color:@lightAccentColor;
+				font-weight:600;
+			}
+			&.home-active {
+				.page-home {
+					.active;
+				}
+			}
+			&.custom-active {
+				.page-custom {
+					.active;
+				}
+			}
+			&.shop-active {
+				.page-shop {
+					.active;
+				}
+			}
+			&.about-active {
+				.page-about {
+					.active;
+				}
+			}
+			&.contact-active {
+				.page-contact {
+					.active;
+				}
+			}
 		}
 		.rule {
 			background: transparent url('/img/Rule800Blue.png') no-repeat;
@@ -87,8 +201,9 @@ body {
 			margin:0px auto;
 		}
 
-		#slider {
+		#homeSlider {
 			//width: 800px;
+			height: 700px;
 			.carousel-images {
 				//width:400px;
 				//max-width:600px;
@@ -191,6 +306,53 @@ body {
 						left:45px;
 						top:100px;
 					}
+				}
+			}
+		}
+		.contact {
+			.imageBox1 {
+				width:760px;
+				height:506px;
+				background: transparent url('/img/blueDesk.jpg') no-repeat;
+				margin:20px auto;
+				position: relative;
+				.linkIcon {
+					display:block;
+					width:80px;
+					height:80px;
+					position:absolute;
+					top:260px;
+				}
+				.facebook {
+					.linkIcon;
+					background: transparent url('/img/f_logo.png') no-repeat;
+					left:420px;
+				}
+				.email {
+					.linkIcon;
+					background: transparent url('/img/email.png') no-repeat;
+					left: 550px;
+				}
+				.copyBox {
+					background: transparent url('/img/33333380.png');
+					position:absolute;
+					padding:10px;
+					color:@lightAccentColor;
+					text-align: center;
+					top:150px;
+					left:120px;
+					font-family: 'NadiaSerifNormal';
+					font-size: 20px;
+					line-height: 24px;
+				}
+			}
+		}
+		.shop {
+			.itemWrapper {
+				width: 760px;
+				margin: 20px auto;
+				ul {
+					width: 630px;
 				}
 			}
 		}

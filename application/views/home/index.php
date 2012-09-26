@@ -1,5 +1,5 @@
 <div class="home">
-	<div id="slider">
+	<div id="homeSlider">
 		<div class="carousel-images">
 			<?php 
 				$id = 1;

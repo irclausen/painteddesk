@@ -18,6 +18,7 @@ class Home extends CI_Controller {
 		}
 		
 		$this->load->library('rb');
+		$data['section'] = $this->section;
 		$data['title'] = ucfirst($page); // Capitalize the first letter
 		
 		$this->load->view('templates/header', $data);

@@ -4213,6 +4213,13 @@ a.badge:hover {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'NadiaSerifNormal';
+  src: url('/fonts/nadia_serif-webfont.eot');
+  src: url('/fonts/nadia_serif-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/nadia_serif-webfont.woff') format('woff'), url('/fonts/nadia_serif-webfont.ttf') format('truetype'), url('/fonts/nadia_serif-webfont.svg#NadiaSerifNormal') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /*
  * jQuery FlexSlider v2.0
  * http://www.woothemes.com/flexslider/
@@ -4421,6 +4428,84 @@ html[xmlns] .slides {
    Author: Ian Clausen
    ========================================================================== */
 /* Kuler Profiles */
+/*** Direction Aware Styles ***/
+.da-thumbs {
+  list-style: none;
+  width: 1008px;
+  position: relative;
+  margin: 10px auto;
+  padding: 0;
+}
+.da-thumbs li {
+  float: left;
+  margin: 0 8px 6px 0;
+  background: #fff;
+  position: relative;
+}
+.da-thumbs li a,
+.da-thumbs li a img {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+.da-thumbs li a {
+  overflow: hidden;
+}
+.da-thumbs li a div {
+  position: absolute;
+  margin: 0;
+  background: url('/img/33333380.png') 0 0;
+  width: 100%;
+  height: 100%;
+}
+.da-thumbs li a div.da-animate {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* Initial state classes: */
+.da-slideFromTop {
+  left: 0px;
+  top: -100%;
+}
+.da-slideFromBottom {
+  left: 0px;
+  top: 100%;
+}
+.da-slideFromLeft {
+  top: 0px;
+  left: -100%;
+}
+.da-slideFromRight {
+  top: 0px;
+  left: 100%;
+}
+/* Final state classes: */
+.da-slideTop {
+  top: 0px;
+}
+.da-slideLeft {
+  left: 0px;
+}
+.da-thumbs li a div span {
+  display: block;
+  padding: 10px 0;
+  margin: 40px 20px 20px 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #EEE;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -10px 0 rgba(255, 255, 255, 0.3);
+  font-family: 'NadiaSerifNormal';
+}
+.da-thumbs li a div span font {
+  font-weight: bold;
+  text-decoration: none;
+}
+/*** end direction aware styles ***/
 body {
   background-image: url('/img/wood_64.jpg');
 }
@@ -4449,21 +4534,50 @@ body .container .titleDiv .banner h1 a {
 body .container .nav-items {
   text-align: center;
   line-height: 30px;
+  font-family: 'NadiaSerifNormal';
 }
 body .container .nav-items a {
   font-size: 18px;
   margin: 0px 10px;
   line-height: 60px;
   color: #403e3f;
+  text-decoration: none;
 }
 body .container .nav-items a:hover {
   color: #d9d9d9;
+}
+body .container .nav-items .active {
+  color: #ddddcd;
+  font-weight: 600;
+}
+body .container .nav-items.home-active .page-home {
+  color: #ddddcd;
+  font-weight: 600;
+}
+body .container .nav-items.custom-active .page-custom {
+  color: #ddddcd;
+  font-weight: 600;
+}
+body .container .nav-items.shop-active .page-shop {
+  color: #ddddcd;
+  font-weight: 600;
+}
+body .container .nav-items.about-active .page-about {
+  color: #ddddcd;
+  font-weight: 600;
+}
+body .container .nav-items.contact-active .page-contact {
+  color: #ddddcd;
+  font-weight: 600;
 }
 body .container .rule {
   background: transparent url('/img/Rule800Blue.png') no-repeat;
   width: 800px;
   height: 9px;
   margin: 0px auto;
+}
+body .container #homeSlider {
+  height: 700px;
 }
 body .container #carousel {
   width: 600px;
@@ -4561,6 +4675,57 @@ body .container .custom .imageBox1 .copyBox.two {
 body .container .custom .imageBox1 .copyBox.three {
   left: 45px;
   top: 100px;
+}
+body .container .contact .imageBox1 {
+  width: 760px;
+  height: 506px;
+  background: transparent url('/img/blueDesk.jpg') no-repeat;
+  margin: 20px auto;
+  position: relative;
+}
+body .container .contact .imageBox1 .linkIcon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 260px;
+}
+body .container .contact .imageBox1 .facebook {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 260px;
+  background: transparent url('/img/f_logo.png') no-repeat;
+  left: 420px;
+}
+body .container .contact .imageBox1 .email {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 260px;
+  background: transparent url('/img/email.png') no-repeat;
+  left: 550px;
+}
+body .container .contact .imageBox1 .copyBox {
+  background: transparent url('/img/33333380.png');
+  position: absolute;
+  padding: 10px;
+  color: #ddddcd;
+  text-align: center;
+  top: 150px;
+  left: 120px;
+  font-family: 'NadiaSerifNormal';
+  font-size: 20px;
+  line-height: 24px;
+}
+body .container .shop .itemWrapper {
+  width: 760px;
+  margin: 20px auto;
+}
+body .container .shop .itemWrapper ul {
+  width: 630px;
 }
 body .container .admin .createDiv {
   width: 760px;

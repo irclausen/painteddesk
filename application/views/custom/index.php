@@ -17,7 +17,7 @@
 		<div class="copyBox three">
 			<p>Color Options:</p>
 			<p>An elegant palatte of colors is available to choose from as well as custom mixing to get just the right color for your personal liking.</p>
-			<p>Email <a mailto="lindsay@thepainteddesk.com">lindsay@thepainteddesk.com</a> to get a personal quote.</p>
+			<p>Email <a href="mailto:lindsay@thepainteddesk.com">lindsay@thepainteddesk.com</a> to get a personal quote.</p>
 		</div>
 		
 	</div>

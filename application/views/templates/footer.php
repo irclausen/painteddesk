@@ -6,7 +6,7 @@
 <script src="js/libs/bootstrap/bootstrap.min.js"></script>
 <script src="/js/libs/jquery.flexslider.js"></script>
 <script src="/js/libs/jquery.waterwheelCarousel.js"></script>
-
+<script src="/js/libs/jquery.hoverdir.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

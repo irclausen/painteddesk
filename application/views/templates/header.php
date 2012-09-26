@@ -23,11 +23,11 @@
 			<h1><a href="/">The Painted Desk</a></h1>
 		</div>
 	</div>
-	<div class="nav-items">
-		<a href="/">Home</a> | 
-		<a href="/custom">Custom</a> | 
-		<a href="/shop">Shop</a> | 
-		<a href="/about">About</a> | 
-		<a href="/contact">Contact</a>
+	<div class="nav-items <?php if(isset($section)) {echo $section.'-active';} ?>">
+		<a class="page-home" href="/">Home</a> | 
+		<a class="page-custom" href="/custom">Custom</a> | 
+		<a class="page-shop" href="/shop">Shop</a> | 
+		<a class="page-about" href="/about">About</a> | 
+		<a class="page-contact" href="/contact">Contact</a>
 	</div>
 	<div class="rule"></div>
