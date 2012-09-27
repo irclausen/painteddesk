@@ -101,6 +101,62 @@ class Setup extends CI_Controller {
 	    $furniture->isForSale = false;
 	    $furniture->color = 'Custom Blend';
 	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Small Table';
+	    $furniture->primaryImage = '/img/furniture/smallAngieTable.jpg';
+	    $furniture->isForSale = false;
+	    $furniture->color = 'Custom Blend';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Dresser';
+	    $furniture->primaryImage = '/img/furniture/angieDresser.jpg';
+	    $furniture->isForSale = false;
+	    $furniture->color = 'Custom Blend';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Aubusson Desk';
+	    $furniture->primaryImage = '/img/furniture/aubussonDesk.jpg';
+	    $furniture->isForSale = true;
+	    $furniture->color = 'Aubusson Blue';
+	    R::store($furniture);
+	    
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Aubusson Nightstand';
+	    $furniture->primaryImage = '/img/furniture/aubussonNightstand.jpg';
+	    $furniture->isForSale = false;
+	    $furniture->color = 'Aubusson Blue';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Blue Changing Table';
+	    $furniture->primaryImage = '/img/furniture/blueChangingTable.jpg';
+	    $furniture->isForSale = false;
+	    $furniture->color = 'Blue';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Drop Leaf Table';
+	    $furniture->primaryImage = '/img/furniture/dropLeafTable.jpg';
+	    $furniture->isForSale = false;
+	    $furniture->color = 'Blue';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Drum Table Provence';
+	    $furniture->primaryImage = '/img/furniture/drumTableProvence.jpg';
+	    $furniture->isForSale = false;
+	    $furniture->color = 'Provence';
+	    R::store($furniture);
+
+	    $furniture = R::dispense('furniture');
+	    $furniture->title = 'Empire Dresser';
+	    $furniture->primaryImage = '/img/furniture/empireDresser.jpg';
+	    $furniture->isForSale = false;
+	    $furniture->color = 'Custom';
+	    R::store($furniture);	
 		
 		$data['title'] = ucfirst($page); // Capitalize the first letter
 		
